@@ -31,7 +31,7 @@ else:
         posts_replied_to = filter(None, posts_replied_to)
 
 # Get the top 5 values from our subreddit
-subreddit = r.get_subreddit('pythonforengineers')
+subreddit = r.get_subreddit('calgaryflames')
 for submission in subreddit.get_hot(limit=5):
     # print submission.title
 
@@ -39,9 +39,9 @@ for submission in subreddit.get_hot(limit=5):
     if submission.id not in posts_replied_to:
 
         # Do a case insensitive search
-        if re.search("i love python", submission.title, re.IGNORECASE):
+        if re.search("pickle", submission.title, re.IGNORECASE):
             # Reply to the post
-            submission.add_comment("Nigerian scammer bot says: It's all about the Bass (and Python)")
+            submission.add_comment("WHO LOVES PICKLE? YOU LOVES PICKLE: PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE PICKLE ^^^^Iregretnothing")
             print "Bot replying to : ", submission.title
 
             # Store the current id into our list
